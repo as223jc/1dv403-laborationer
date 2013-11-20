@@ -7,14 +7,37 @@ window.onload = function(){
 		// Plats för förändring.		
 		// Returnera den konverterade strängen.
 		// Vid fel, kasta ett undantag med ett meddelande till användaren. 
-	
+		try{
+			console.log(str[0]);
+			var stringen = "";
+			//toLowerCase() 
+			//toUpperCase()
+			if(!str)
+				throw "Du måste skicka en mening.";
+			for (var i = 0; i < str.length; i++) {
+				var character = str.charAt(i);
+				console.log(character);
+				if (character == character.toUpperCase()) {
+					console.log("här inne");
+			 		//stringen = stringen + character.toLowerCase();
+			 		stringen += character.toLowerCase();
+				}
+				else if (character == character.toLowerCase()){
+			 		// stringen = stringen + character.toUpperCase();
+			 		stringen += character.toUpperCase();
+				}
+			}			
+			var newString = stringen.replace(/a/gi,"#");
+			return newString;
+		}			
 
-
-
-
-
-
+		catch (err){
+			console.log(err);
+			return err;
+		}
 	};
+
+
 	// ------------------------------------------------------------------------------
 
 
