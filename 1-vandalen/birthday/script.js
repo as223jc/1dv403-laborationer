@@ -2,16 +2,34 @@
 
 window.onload = function(){
 
-	
 	var birthday = function(date){
-		
+		try{
+			if(!date)
+				throw "Du måste ange ett födelsedatum";										
+			//dagens datum
+			var dagensDatum = new Date();
+			var month = dagensDatum.getMonth()+1;
+			var day = dagensDatum.getDate();
+			var year = dagensDatum.getFullYear();
+			
+			//skapa ett date-objekt som inneåller personens födelsedag(årets)
+			var bmon = parseInt(date.substring(5,7));
+			var bday = parseInt(date.substring(8,10));
+			var fodelsedag = new Date(year, bmon-1, bday);
+			//delar tiden mellan dagnes datum och födelsedagne med antal ms på en dag för att få resultatet i dagar
+			var ms = (fodelsedag.getTime() - dagensDatum.getTime()) / 86400000;
+			//runda uppåt
+			ms = Math.ceil(ms);
 
-
-			// Din kod här.
-
-
-
-
+			//om personen har fyllt år lägger vi på ett år och subtraherar dagarna som gått sedan födelsedagen
+			if(ms<0){
+			 	ms = 365 - ms;
+			 }
+			return Math.ceil(ms);
+		}
+		catch(ex){
+			console.log(ex);
+		}	
 	};
 	// ------------------------------------------------------------------------------
 
