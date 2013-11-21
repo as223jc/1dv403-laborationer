@@ -32,9 +32,6 @@ var makePerson = function(persArr){
 	result = {minAge : ages[0], maxAge : ages[persArr.length-1], averageAge : avgAge, names : namn};
     
 	return result;
-<<<<<<< HEAD
-}
-=======
 };
 
 
@@ -43,4 +40,3 @@ var data = [{name: "Öohn Häggerud", age: 37}, {name: "Åohan Leitet", age: 36}
 var result = makePerson(data);
 
 console.log(result);
->>>>>>> 1207e6a27b4b85d2de60f26fbce90faf556d46ca
