@@ -23,7 +23,7 @@ window.onload = function(){
 
 			//om personen har fyllt år lägger vi på ett år och subtraherar dagarna som gått sedan födelsedagen
 			if(ms<0){
-			 	ms = 365 - ms;
+			 	ms = 365 + ms;
 			 }
 			return Math.ceil(ms);
 		}
