@@ -1,0 +1,137 @@
+body{
+	overflow:hidden;
+    background:#ddf1cf;
+    color:#ffffff;
+}
+
+html{
+    overflow:hidden;
+}
+
+
+#wrapper{
+    margin:250px auto;
+    padding:10px 24px 10px 24px;
+    width:450px;
+    border-radius:25px;
+    background:#3c651f;    
+    box-shadow: 5px 5px 10px #888;
+    
+    border:1px solid #274e21;
+}
+
+#content{
+    margin-left:35px;
+}
+
+#content h1{
+    font-family:Vivaldi;
+    font-size:68px;
+    margin-bottom:15px;
+    color:#ffffff;    
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+#content label{
+    color:#ffffff;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+#content label{
+    font-size:14px;
+}
+
+#content input, #content select{
+    height:25px;
+    margin-top:5px;
+}
+
+#content select {
+    padding:0;
+    margin-left:4px;
+}
+
+#select{
+    width:178px;
+    text-align:right;
+
+}
+
+
+#skicka{
+    margin:0;
+    border-radius:3px;
+}
+#sendButton{
+    margin-left:100px;
+}
+
+.fel{
+    background:#f04124;
+    padding:2px 2px 2px 0;
+    width:100%;
+    height:40px;
+    position:relative;
+    bottom: 5px;
+    top: -17px;
+}
+
+.hidden{
+    display:none;
+}
+
+.show{
+    display:block;
+}
+
+#skugga{
+    width:1000%;
+    height:1000%;
+    background:rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: -250px;
+    z-index: 1;
+}
+
+#firstname,
+#lastname,
+#email,
+#postal,
+#pricemodel {
+    float: right;
+    color: black;
+    font-weight: 100 !important;
+    font-style: italic;
+    margin: 0;
+    margin-top: -46px;
+}
+
+#hej {
+    color: black;
+    width: 351px;
+    height: 400px;
+    padding: 5px 15px 5px 15px;
+    position: absolute;
+    background: white;
+    top: 30%;
+    left: 41%;
+    z-index: 9999;
+}
+#hej h1{
+    font-size:28px;
+}
+
+#hej p{
+    font-weight:bold;
+}
+
+#popFooter{
+    text-align:center;
+}
+
+#abort{
+    background:red;
+}
+#confirmBuy{
+    background:green;
+}

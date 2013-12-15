@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Memory</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/modernizr.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="skugga" class="hide"></div>
+    <div id="hej" class="hide">
+        <h1>Vänligen bekräfta ditt köp</h1>
+        <hr>
+        <p id="fName"></p><p id="firstname"></p>
+        <p id="lName">Efternamn:</p><p id="lastname"></p>
+        <p id="pNumb">Postnummer:</p><p id="postal"></p>
+        <p id="iPost">E-postadress:</p><p id="email"></p>
+        <p id="pModel">Prismodell:</p><p id="pricemodel"></p>
+        <hr>
+        <div id="popFooter">
+            <button id="abort">Avbryt</button>
+            <button id="confirmBuy">Bekräfta Köp</button>
+        </div>
+    </div>
+    <div id="wrapper">
+        <header></header>
+
+        <main id="content">
+            <h1>Formulär</h1>            
+            <div id="formular">
+                <form id ="bestallning" action="http://voyager.lnu.se/tekinet/kurser/dtt/wp_webbteknik/process_form.php" method="post">
+                    <div class="row">
+                        <div class="small-8">
+                            <div class="row">
+                                <div class="small-3 columns">
+                                    <label for="fornamn" class="right inline">Förnamn:</label>
+                                </div>
+                                <div class="small-9 columns">
+                                    <input name="Förnamn:" type="text" id="fornamn" placeholder="ex. Sven" autofocus>
+                                    <small class="fel hidden" id="felfornamn">Du får enbart ange ett förnamn. Inga siffror eller tecken är tillåtna.</small>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="small-3 columns">
+                                    <label for="efternamn" class="right inline">Efternamn:</label>
+                                </div>
+                                <div class="small-9 columns">
+                                    <input name="Efternamn:" type="text" id="efternamn" placeholder="ex. Svensson">
+                                    <small class="fel hidden" id="felefternamn">Du får enbart ange ett efternamn. Inga siffror eller tecken är tillåtna.</small>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="small-3 columns">
+                                    <label for="postnummer" class="right inline">Postnummer:</label>
+                                </div>
+                                <div class="small-9 columns">
+                                    <input name="Postnummer:" type="text" id="postnummer" placeholder="ex. 392 34">
+                                    <small class="fel hidden" id="felpostnummer">Inga specialtecken får anges. Endast Svenska postnummer inledandes SE är tillåtet.</small>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="small-3 columns">
+                                    <label for="epost" class="right inline">E-post:</label>
+                                </div>
+                                <div class="small-9 columns">
+                                    <input name="E-postadress:" type="text" id="epost" placeholder="ex. 123@abc.com">
+                                    <small class="fel hidden" id="felepost">Du måste ange en giltig e-postadress.</small>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="large-12 columns">
+                                    <div class="small-3 columns">
+                                        <label class="right inline">Prismodell:</label>
+                                    </div>
+                                    <select name="Prismodell:" id="select">
+                                        <option value="Låg">Låg</option>
+                                        <option value="Mellan">Mellan</option>
+                                        <option value="Hög">Hög</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="sendButton">
+                                <a href="#" class="button success" id="skicka">Skicka</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="script/script.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+</body>
+</html>
