@@ -14,7 +14,7 @@ html{
     padding:10px 24px 10px 24px;
     width:450px;
     border-radius:25px;
-    background:#3c651f;    
+    background:#423333;    
     box-shadow: 5px 5px 10px #888;
     
     border:1px solid #274e21;
@@ -61,6 +61,7 @@ html{
 #skicka{
     margin:0;
     border-radius:3px;
+    background: #ACACAC;
 }
 #sendButton{
     margin-left:100px;
@@ -106,7 +107,7 @@ html{
     margin-top: -46px;
 }
 
-#hej {
+#popBekraftelse {
     color: black;
     width: 351px;
     height: 400px;
@@ -117,11 +118,11 @@ html{
     left: 41%;
     z-index: 9999;
 }
-#hej h1{
+#popBekraftelse h1{
     font-size:28px;
 }
 
-#hej p{
+#popBekraftelse p{
     font-weight:bold;
 }
 

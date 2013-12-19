@@ -15,14 +15,14 @@ var validateForm = {
         postnummer: /^((\d{5})|(\d{3}(\-|\ )\d{2}))|((SE|SE\ )(\d{3}((\ |\-)\d{2})|\d{5}))$/,
     },
     init: function () {
-        validateForm.validateFornamn(validateForm.ifName);
-        validateForm.validateFornamn(validateForm.ilName);
-        validateForm.validateFornamn(validateForm.ipNum);
-        validateForm.validateFornamn(validateForm.iEmail);
+        validateForm.validateInput(validateForm.ifName);
+        validateForm.validateInput(validateForm.ilName);
+        validateForm.validateInput(validateForm.ipNum);
+        validateForm.validateInput(validateForm.iEmail);
         var skicka = document.getElementById("skicka");
         skicka.onclick = function () { validateForm.confirmSubmit(); }
     },
-    validateFornamn: function (x) {
+    validateInput: function (x) {
         var ident = document.getElementById("fel" + x.id);
         var identEx;       
         for (var i in this.regex){
@@ -39,6 +39,12 @@ var validateForm = {
                 ident.className = "fel hidden";
                 validateForm.error = false;
                 validateForm.noErrors = true;
+                if (x.id === "postnummer") { 
+                    var pnReg = /^\d{5}$/;
+                    if (pnReg.test(x.value.replace(/[^0-9]/g, "")) === true) {
+                        x.value = x.value.replace(/[^0-9]/g, "");
+                    }
+                }
             }
         }
     },
@@ -46,7 +52,7 @@ var validateForm = {
         this.checkForErrors();
         if (this.noErrors && !validateForm.error) {
             var skugga = document.getElementById("skugga");
-            var confirmBox = document.getElementById("hej");
+            var confirmBox = document.getElementById("popBekraftelse");
             var btnSend = document.getElementById("bestallning");
             skugga.className = "show";
             confirmBox.className = "show";
