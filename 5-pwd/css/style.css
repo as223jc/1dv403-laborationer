@@ -42,5 +42,250 @@ table {
 }
 
 body {
-    background:#b786ad;
+    background:#fff;
+    overflow:hidden;    
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+background: rgba(146, 59, 59, 0.5);
+}
+
+#icon-menu{
+  height: 16px;
+width: 400px;
+margin: 0 auto;
+position: absolute;
+left: 40%;
+bottom: 11%;
+background: rgba(219, 219, 219, 0.5);
+border-radius: 25px;
+-webkit-box-shadow: rgba(165, 165, 165, 0.5) 0px 6px 5px;
+border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#imgicon{
+    margin-left: 140px;
+display: inline-block;
+width: 32px;
+height: 32px;
+margin-top: -65px;
+
+    border-radius:5px;
+}
+#imgicon:hover{
+    -webkit-transition: all 0.1s ease;
+    -webkit-transform:scale(1.2);
+}
+
+#memoryicon{
+display: inline-block;
+width: 32px;
+height: 32px;
+margin-top: -75px;
+border-radius: 5px;
+}
+
+#memoryicon:hover{
+    -webkit-transition: all 0.1s ease;
+    -webkit-transform:scale(1.2);
+}
+
+#rssicon{
+display: inline-block;
+width: 32px;
+height: 32px;
+margin-top: -75px;
+border-radius: 5px;
+}
+
+#rssicon:hover{
+    -webkit-transition: all 0.1s ease;
+    -webkit-transform:scale(1.2);
+}
+
+.wrapDiv{
+    width:300px;   
+    height: auto;
+    margin:0 auto;    
+    position:absolute; 
+    min-height:350px;
+    min-width: 330px;
+    max-width:700px;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,0.5);
+border: 1px solid rgb(99, 99, 99);
+}
+
+.windowz{
+    text-align:center;
+    height: 500px;
+overflow: auto;
+}
+
+
+.titlez{
+    width:100%;
+    height:20px;
+    background:rgba(0,0,0,0.8);
+    position:relative;
+    border-radius:3px;
+    text-decoration:none;
+    color:white;
+}
+
+.titlez:hover{
+    cursor:pointer;
+}
+
+.titlez:active{
+    cursor:move;
+}
+
+.arkivLink{
+    text-decoration: none;
+color: white;
+float: left;
+position: absolute;
+left: 2px;
+top: 3px;
+font-family: helvetica serif;
+font-style: italic;
+font-size: 15px;
+}
+.exitButton{
+    
+    text-decoration: none;
+color: white;
+    float: right;
+position: relative;
+right: 3px;
+top: 3px;
+}
+.exitButton:hover{
+    color:#fb8181;
+}
+    .titlez p {
+        position: absolute;
+        margin: 4px 0 0 3px;
+        font-size: 13px;
+        text-decoration: underline;
+    }
+    .titlez p a{
+        text-decoration:none;
+        
+        color: white;
+    }
+
+.imgLinks{
+    width: 85px;
+    height: 60px;
+display: inline-block;
+text-align: center;
+margin:5px;
+background:#fff;
+border-radius:5px;
+}
+
+.imageList{
+    margin-top:5px;
+}
+
+#bilder{
+}
+
+.hidden{
+    display:none !important;
+}
+
+.loaderimage{    
+    text-align:center;    
+display: block;
+width: 32px;
+height: 32px;
+margin-left: 46%;
+margin-top: 34%;
+}
+
+.exitButton{
+    float:right;
+    position:relative;
+}
+
+.titleMove{
+    width:100%;
+}
+
+.statusDiv{
+ background: black;
+width: 100%;
+height: 17px;
+position: absolute;
+bottom: -16px;
+}
+
+.statusMsg{
+    color: white;
+position: absolute;
+top: 3px;
+left: 4px;
+font-size: 12px;
+}
+
+.resizeButton{
+color: white;
+position: absolute;
+right: 3px;
+top: 0px;
+font-size: 15px;
+text-decoration: none;
+}
+
+.resizeButton:hover{
+    cursor:se-resize;
+}
+
+#menu-bg{
+ background: rgba(0,0,0,0.5);
+height: 226px;
+z-index: -9999;
+opacity: 0.5;
+position: absolute;
+width: 1979px;
+top: -31px;
+border-radius: 15px;
+box-shadow: black 0px 0px 49px;
+right: -770px;
+}
+
+.memory{
+
+}
+
+.rss{
+
+}
+
+.memory img{    
+    height:48px;
+    width:48px;
+    margin:13px;
+}
+
+.rssFeed{
+
+}
+
+.rssFeed a{
+    font-size:8px;
+}
+
+.rss_title{
+    color: white;
+font-weight: 700;
+font-size: 11px;
+background: rgba(197, 197, 197, 0.5);
+padding: 2px 0px 2px 0px;
 }
