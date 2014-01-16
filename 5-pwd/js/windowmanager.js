@@ -2,7 +2,8 @@
 
 
 
-var windowManager = windowManager || {};
+var windowManager = windowManager || {
+};
 windowManager.util = windowManager.util || {};
 
 var _startX = 0;   
@@ -13,8 +14,11 @@ var _dragElement;
 var newZindex = 100;
 var offHeight;
 var offWidth;
+var bodyHeight;
+var bodyWidth;
 
 windowManager.util.createWindow = function (type, number, loader, resize) {
+    
     this.bg = document.createElement("div");
     this.exitButton = document.createElement("a");
     this.menu = document.createElement("div");
@@ -88,8 +92,8 @@ windowManager.util.createWindow = function (type, number, loader, resize) {
     this.resize.innerHTML = "o";
     this.resize.href = "#";
     this.resize.className = "resizeButton";
+    this.resize.onclick = function () { return false;}
     this.resize.onmousedown = windowManager.util.onMouseDown;
-
     this.resize.onmouseup = windowManager.util.onMouseUp;
     this.status.appendChild(this.statusMsg);
     if (resize) {
@@ -105,6 +109,8 @@ windowManager.util.createWindow = function (type, number, loader, resize) {
 windowManager.util.onMouseDown = function (e) {
     this.windowmanager = windowManager.util;
     this.target = e.target;
+    bodyHeight = window.innerHeight;
+    bodyWidth = document.body.offsetWidth;
 
     if (e.button === 0 && (this.target.className === "titlez" || this.target.className === "statusDiv")) {
         this.target.parentNode.style.zIndex = newZindex++;
@@ -135,7 +141,6 @@ windowManager.util.onMouseDown = function (e) {
         document.onmouseup = windowManager.util.onMouseUp;
         return false;
     }
-
 };
 
 
@@ -164,6 +169,9 @@ windowManager.util.onMouseMove = function (e) {
 };
 
 windowManager.util.resizeWindow = function (e) {
+    this.windowHeight = window.innerHeight;
+    this.windowWidth = window.innerWidth;
+    
     _dragElement.style.width = ( e.clientX - _startX) + (offWidth) + "px";
     _dragElement.style.height = ( e.clientY - _startY) + (offHeight) + "px";
 
